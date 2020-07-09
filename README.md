@@ -1,7 +1,7 @@
 # NSAttributedStringSizeBug
 NSAttributedString Size Computer Bug Demo
 
-### NSAttributedString 高度计算的陷阱：  
+### NSAttributedString 高度计算的坑：  
 #### 当原来的文本只有一行的时候，不会因为首行缩进变成两行，而且超出边界文本被截掉  
 ```
 首行缩进是NSMutableParagraphStyle的firstLineHeadIndent属性
