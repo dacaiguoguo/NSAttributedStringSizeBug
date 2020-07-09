@@ -26,18 +26,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSE-nu-Qdf">
+                                <rect key="frame" x="10" y="320" width="394" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="IwF-mg-eJF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RkS-jo-nQf" secondAttribute="trailing" constant="10" id="5SM-Nf-38b"/>
                             <constraint firstItem="RkS-jo-nQf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MOh-L5-xps"/>
+                            <constraint firstItem="mSE-nu-Qdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="XAc-kN-byS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mSE-nu-Qdf" secondAttribute="trailing" constant="10" id="apN-ds-eJp"/>
+                            <constraint firstItem="RkS-jo-nQf" firstAttribute="top" secondItem="mSE-nu-Qdf" secondAttribute="bottom" constant="64" id="erf-id-iny"/>
                             <constraint firstItem="RkS-jo-nQf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="nsE-Tb-FWe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="testLabel" destination="RkS-jo-nQf" id="F9A-jg-eyk"/>
                         <outlet property="testLabelHeightLayout" destination="utS-NW-rdM" id="lpb-bP-0gg"/>
+                        <outlet property="testOneLineHeightLayout" destination="IwF-mg-eJF" id="N6A-Eh-WKg"/>
+                        <outlet property="testOneLineLabel" destination="mSE-nu-Qdf" id="cKE-mW-Egl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
