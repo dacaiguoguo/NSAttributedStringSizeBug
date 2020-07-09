@@ -27,8 +27,8 @@
     NSDictionary *att = @{NSParagraphStyleAttributeName: paraStyle,
                           NSFontAttributeName: font,
                           NSForegroundColorAttributeName: [UIColor darkTextColor]};
-//    NSString *testContent = @"首行缩进 测试首行缩进 测试测测试首行缩进 测试测首行缩进 测试首行缩进 测试测测试首行缩进 测试测";
-    NSString *testContent = @"首行缩进 测试首行缩进 测试";
+     NSString *testContent = @"首行缩进 测试首行缩进 测试测测试首行缩进 测试测首行缩进 测试首行缩进 测试测测试首行缩进 测试测";
+//    NSString *testContent = @"首行缩进 测试首行缩进 测试";
     NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:testContent attributes:att];
     CGRect rect = [attrText boundingRectWithSize:CGSizeMake(labelWitdh, 1000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
     CGFloat nameHeight = ceilf(CGRectGetHeight(rect));
@@ -37,7 +37,8 @@
     NSLog(@"%lf", nameHeight);
     self.testLabelHeightLayout.constant = nameHeight;
 
-//  NSAttributedString 高度计算的陷阱：当原来的文本只有一行的时候，不会因为首行缩进变成两行
+    // NSAttributedString 高度计算的陷阱：当原来的文本只有一行的时候，不会因为首行缩进变成两行，而且超出边界文本被截掉
+    // 只有首行缩进为0时是多行的，增加首行缩进才对高度计算有影响
 }
 
 
